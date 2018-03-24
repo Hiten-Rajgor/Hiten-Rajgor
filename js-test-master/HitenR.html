@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>JS-TEST</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		.container{position: relative; overflow: hidden; max-width: 500px; margin: 0 auto;}
+		img{display: block; margin: 50px auto; width: 250px;}	
+		.button-holder{position: relative; overflow: hidden; display: flex; flex-direction: row; flex-wrap:wrap;justify-content: space-around;}
+		.button{width: 60px; height: 30px; overflow: hidden; position: relative; border-radius: 5px;
+			border:none;outline: none; margin: 15px 0;}
+		.button:active{border: none; outline: none;}
+		.button:hover{cursor: pointer; opacity: .8; transition: .3s;}
+		.black{background: #000;}
+		.gold{background: #FFD700;}
+		.blue{background: #0000FF;}
+		.rosegold{background: #B76E79;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img id="phone" src='images/black.jpeg' alt="iphone">
+		<div class="button-holder">
+			<button onclick="changeR('images/black.jpeg')" class="button black"></button>
+			<button onclick="changeR('images/gold.jpeg')" class="button gold"></button>
+			<button onclick="changeR('images/blue.jpeg')" class="button blue"></button>
+			<button onclick="changeR('images/rose-gold.jpeg')" class="button rosegold"></button>
+		</div>
+		<script>
+			function changeR(path) {
+				var iHold = document.querySelector("#phone");
+				iHold.src = path;
+			}
+		</script>
+	</div>
+</body>
+</html>
