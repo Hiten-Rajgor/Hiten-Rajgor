@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>JS test 2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body, html{margin: 0; padding: 0;font-family: arial, sans-serif;}
+		ol li{font-size: 18px; margin: 50px 0;}
+		.topic{text-align: center; font-size: 20px;text-decoration: underline; margin: 30px 0;}
+		.cont{max-width: 960px; margin: 50px auto;}
+		.ques{font-size: 18px; margin: 10px 0;}
+		#ans{font-size: 16px; margin: 10px 0 20px;line-height: 22px;}
+		.button{font-size: 14px; line-height: 40px; width: 200px; border: 1px solid #333; text-align: center;text-transform: uppercase; cursor: pointer; margin: 20px 0; letter-spacing: 1px;}
+		.button:hover{background: #4caf50; border: 1px solid #4caf50; transition: .2s; color: #fff;}
+	</style>
+</head>
+<body>
+	<div class="cont">
+		<h1 class="topic">JS Assignment Session one</h1>
+		<ol>
+			<li>
+				<h6 class="ques">Create a variable called carName, assign the value “Honda City" to it, and display it.</h6>
+				<p id="ans"></p>
+				<div onclick="carName()" class="button">Click for Answer</div>
+			</li>
+			<li>
+				<h6 class="ques">Create a variable called number, assign the value 150 to it, and display it.</h6>
+				<p id="ans2"></p>
+				<div onclick="number()" class="button">Click for Answer</div>
+			</li>
+			<li>
+				<h6 class="ques">Display the sum of 5 + 10, using two variables x and y.
+	Create a third variable called z, assign x + y to it, and display it.</h6>
+				<p id="ans3"></p>
+				<div onclick="xy()" class="button">Click for Answer</div>
+			</li>
+			<li>
+				<h6 class="ques">Use a single var keyword to create three variables with the following values: firstName = “John” lastName = 	“Doe" age = 35</h6>
+				<p id="ans4"></p>
+				<div onclick="john()" class="button">Click for Answer</div>
+			</li>
+			<li>
+				<h6 class="ques">Create DOB constant. Assume calculateAge() function will give you age. Store the value of calculateAge() in your variable/constant.</h6>
+				<p id="ans5"></p>
+				<div onclick="age()" class="button">Click for Answer</div>
+			</li>
+			<li>
+				<h6 class="ques">Create a variable, assign some value to your variable and insert the value inside "div" element.</h6>
+				<div id="ans6"></div>
+				<div onclick="random()" class="button">Click for Answer</div>
+			</li>
+		</ol>
+	</div>
+	<script>
+		function carName() {
+			var carName = "Honda City";
+			document.querySelector("#ans").innerHTML = "Answer: " + carName;
+		}
+		function number() {
+			var number = 150;
+			document.querySelector("#ans2").innerHTML = "Answer: " + number;
+		}
+		function xy(){
+			var x = 5, y = 10;
+			var z = x + y;
+			document.querySelector("#ans3").innerHTML = "Answer: " + "x + y = " + (x += y) + ', third variable z = ' + z;	
+		}
+		function john(){
+			var firstName = "John", lastName = "Doe", age = 35;
+			document.querySelector("#ans4").innerHTML = firstName + lastName + ", age: " + age;	
+		}
+		function age(){
+			const DOB = calculateAge();
+			function calculateAge(){
+				console.log('calculateAge is an assumed function, hence do nothing')
+			}
+			document.querySelector("#ans5").innerHTML = "Answer: Constant DOB have function calculateAge() as it's value";	
+		}
+		function random(){
+			var random = "I am inside a div, not like above answers, they are in a paragaph tag"
+			document.querySelector("#ans6").innerHTML = random;	
+		}
+	</script>
+</body>
+</html>
