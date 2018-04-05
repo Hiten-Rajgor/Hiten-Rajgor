@@ -13,6 +13,7 @@
 		#ans{font-size: 16px; margin: 10px 0 20px;line-height: 22px;}
 		.button{font-size: 14px; line-height: 40px; width: 200px; border: 1px solid #333; text-align: center;text-transform: uppercase; cursor: pointer; margin: 20px 0; letter-spacing: 1px;}
 		.button:hover{background: #4caf50; border: 1px solid #4caf50; transition: .2s; color: #fff;}
+		.long{width: 350px;}
 	</style>
 </head>
 <body>
@@ -50,6 +51,10 @@
 				<div id="ans6"></div>
 				<div onclick="random()" class="button">Click for Answer</div>
 			</li>
+			<li>
+				<h6 class="ques">Use above question and use your choice of prompt box to display value of your variable</h6>
+				<div onclick="together()" class="button long">Click to display all answers</div>
+			</li>
 		</ol>
 	</div>
 	<script>
@@ -71,15 +76,24 @@
 			document.querySelector("#ans4").innerHTML = firstName + lastName + ", age: " + age;	
 		}
 		function age(){
-			const DOB = calculateAge();
+			var DOB = calculateAge();
 			function calculateAge(){
-				console.log('calculateAge is an assumed function, hence do nothing')
+				const DOB = 99;
+				return DOB;
 			}
-			document.querySelector("#ans5").innerHTML = "Answer: Constant DOB have function calculateAge() as it's value";	
+			document.querySelector("#ans5").innerHTML = "Answer: DOB = " + DOB;	
 		}
 		function random(){
 			var random = "I am inside a div, not like above answers, they are in a paragaph tag"
 			document.querySelector("#ans6").innerHTML = random;	
+		}
+		function together(){
+			carName();
+			number();
+			xy();
+			john();
+			age();
+			random();
 		}
 	</script>
 </body>
