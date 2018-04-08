@@ -150,7 +150,7 @@
 			var a = 1, b = 1;
 			var c = ++a;
 			var d = b++;
-			document.querySelector('#ans3').innerHTML = h + "Value of c is " + c + " because it's using an post addition method, While value of d is " + d + " is ";
+			document.querySelector('#ans3').innerHTML = h + "Value of a is " + a + ", and b is " + b + " because they are getting added by 1+ in their values throguh c and d, c is " + c + " because it's using an pre addition method, While value of d is " + d + " because it is using a post addition method.";
 			document.querySelector('#button3').classList.toggle('hid');
 			document.querySelector('#ans3').classList.toggle('hido');
 			var txt = document.querySelector('#button3');
@@ -159,6 +159,7 @@
 			}else{
 				txt.innerHTML = 'Click For Answer'
 			}
+
 		}
 		//exp for parantheses
 		function parantho(){
