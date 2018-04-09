@@ -244,19 +244,19 @@
 			var age = document.querySelector('#ageo').value;
 			switch(true){
 				case (age == ''):
-				document.querySelector('#ans8').innerHTML = "Please enter a number";
+				document.querySelector('#ans8').innerHTML = "Please enter your age";
 				break;
-				case (age <= 3):
+				case (age <= 13):
 				document.querySelector('#ans8').innerHTML = h + "Too young to use this!";
 				break
-				case (age > 3 && age < 18):
+				case (age > 13 && age < 18):
 				document.querySelector('#ans8').innerHTML = h + "You are a teenager enjoy your life"
 				break;
 				case (age == 18):
-				document.querySelector('#ans8').innerHTML = h + "you turned an Adult this year! Make sure to Vote and be an ideal citizen";
+				document.querySelector('#ans8').innerHTML = h + "you turned an Adult this year! Make sure to Vote and be a responsible citizen";
 				break;
 				default:
-				document.querySelector('#ans8').innerHTML = h + "You are an adult hope you vote in all elections"
+				document.querySelector('#ans8').innerHTML = h + "You are an adult, hope you vote in all elections"
 			}
 			document.querySelector('#button8').classList.toggle('hid');
 			document.querySelector('#ans8').classList.toggle('hido');
